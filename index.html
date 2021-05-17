@@ -4,79 +4,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-
+  <title>Fleurs Massage</title>
     <link rel="stylesheet" type ="text/css" href="CSS/Main.css"> <!-- Links the HTML to the CSS code -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel|Calligraffitti"> <!-- Links to google fonts! -->
 </head>
 
 
 <body>
-
-<div class="header"> 
-  <h1>Fleur's Relaxation</h1>
-  <h2>Massage and Reflexoloy Treatment</h2>
-</div>
-
     
 <div class="topnav"> 
     <a href="index.html">Home</a>
-    <a href="About1.html">About</a>
     <a href="Treatments1.html">Treatments</a>
-    <a href="Reviews1.html">Reviews</a>
-    <a ID="book" href="Book1.html" style="float:right"><b>Book Now</b></a>
+    <a href="Book1.html"> Book</a>
 </div>
 
     
-<div class="mainContent">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>About me</h2>
-      <p>Yo I am fleur, im really freaking good at massage and reflexology, youre gonna be hella calm man. You can either have hella relaxation at my home treatment room or i can come to you, portable style. Up to you my broski as long as i get the dolla dolla!</p>
-    </div> 
-      
-    <div class="card">
-      <h2>The Space</h2>
-      <p>A little descriprion on what the treatment room is like, or something like that idk. It's so freaking relaxing, please come, gimmie yo money, I didnt re-plaster my spare bedroom for nothing. I mean I was gonna do it anyway but prioitised it for this, so you people could have a relaxing af space.</p>
-      
-        <img ID="image1" src="Images/foot-reflex.jpg" alt="Image of foot massage">
-      
-      <p>Image of some lovely feet</p>
-    </div> 
-  </div>
-    
-  <div class="rightcolumn">
+<div class='Main-image'>
+  <img src="Images/Flower-head.jpg" alt="Line drawing of woman with flowers growing from her head">
+</div>
+<div class='bottom-border'><br></div>
+THIS IS JUST WORDER TO SEE THE BORDER!
 
-    <div class="card">
-      <h2>Offers?</h2>
-      <p>FREE MASSAGE AND REFLEXOLOGY - because i am a student and i can't legally take money from you yet but gifts appreciated...</p>
-    </div> 
-      
-    <div class="card">
-      <h3>Reviews?</h3>
-      
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      
-    </div> 
 
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Below are my social media accounts,feel free to have a look around and maybe give a wee like or follow!</p>
-      <ul>
-        <li style="padding-right: 15px"><a href="https://www.facebook.com/fleur.zaman" target="_blank"><img src="Images/FB-icon-cirlce.png" alt="Facebook Icon" width="50px" height="50px"></a></li>
+<script src="Javascript/Main.js"></script>
+<script >
+	const { styler, spring, listen, pointer, value } = window.popmotion;
 
-        <li><a href="https://twitter.com/fleurzaman?lang=en" target="_blank"><img src="Images/twitter-icon-circle.png" alt="Twitter Icon" width="50px" height="50px"></a></li>
+const ball = document.querySelector('.box');
+const divStyler = styler(ball);
+const ballXY = value({ x: 0, y: 0 }, divStyler.set);
 
-       <li style="padding-left: 15px"><a href="https://www.instagram.com/fleur.zaman/?hl=en-gb" target="_blank"><img src="Images/insta-icon-circle.png" alt="Instagram Icon" width="50px" height="50px"></a></li>
-      </ul>
-    </div> 
-  </div> 
-</div> 
+listen(ball, 'mousedown touchstart')
+  .start((e) => {
+    e.preventDefault();
+    pointer(ballXY.get()).start(ballXY);
+  });
 
-<div class="footer">
-  <h2>Footer</h2>
-</div> 
+listen(document, 'mouseup touchend')
+  .start(() => {
+    spring({
+      from: ballXY.get(),
+      velocity: ballXY.getVelocity(),
+      to: { x: 0, y: 0 },
+      stiffness: 200,
+      // mass: 1,
+      // damping: 10
+    }).start(ballXY);
+  });
+
+</script>
 </body>
 
 </html>
