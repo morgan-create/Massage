@@ -12,6 +12,7 @@
   background: #FCFBF6;
   font-family: Montserrat-Light;
   font-display: swap;
+  color: #f2d7b0; 
  }
 
 .topnav{
@@ -22,10 +23,10 @@
 
  .topnav a{
   text-decoration-line: none;
-  color: #f2d7b0;
   font-size: 30px;
-  padding-left:12%;
-  padding-right:12%;
+  padding-left:12.3%;
+  padding-right:12.3%;
+  color: #f2d7b0; 
 
  }
 
@@ -44,4 +45,17 @@
   margin:0 auto;
   border-bottom:2px solid #f2d7b0;
   
+ }
+
+ .center{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+ }
+
+ .heading {
+   font-size:56px;
+   text-align: center;
+   padding-top: 7%;
+   
  }
