@@ -41,7 +41,6 @@
  }
 
  .bottom-border{
-  width: 70%;
   margin:0 auto;
   border-bottom:2px solid #f2d7b0;
   
@@ -49,7 +48,7 @@
 
  .center{
   margin: auto;
-  width: 50%;
+  width: 100%;
   padding: 10px;
  }
 
@@ -57,5 +56,22 @@
    font-size:56px;
    text-align: center;
    padding-top: 7%;
+   padding-bottom: 10%;
    
+ }
+
+ .availability-card{
+   width: 75%;
+   height:10vh;
+   border: 2px solid #f2d7b0;
+   margin-bottom: 10%;
+   padding-left: 3%;
+   padding-right: 3%;
+ }
+
+ .availability-content{
+   list-style: none;
+   padding: 0px;
+    display: flex;
+    justify-content: space-between;
  }
