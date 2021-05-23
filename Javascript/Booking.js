@@ -10,10 +10,6 @@ var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/10iUKuEVJD8HG
 
 function showInfo(data, tabletop){
     console.log(data);
-    console.log(data[0])
-    console.log(data[1])
-    console.log(data[2])
-    console.log(data[3])
 
     document.querySelector("h2.day").innerHTML = data[0].day
     document.querySelector("td.Slot1").innerHTML = data[0].Slot1
@@ -23,10 +19,7 @@ function showInfo(data, tabletop){
 
     data.forEach(function(data){ 
         
-    console.log(data.day);
-    console.log(data.Slot1);
-    console.log(data.Slot2);
-    console.log(data.Slot3);
+    console.log(data)
 
     }
     )}; 
