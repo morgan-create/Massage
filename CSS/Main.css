@@ -46,6 +46,11 @@
   
  }
 
+ .full-border{
+  margin:0 auto;
+  border:2px solid #f2d7b0;
+ }
+
  .center{
   margin: auto;
   width: 100%;
@@ -60,18 +65,25 @@
    
  }
 
- .availability-card{
-   width: 75%;
-   height:10vh;
+ .availabilityCard{
+   width: 70%;
    border: 2px solid #f2d7b0;
    margin-bottom: 10%;
    padding-left: 3%;
    padding-right: 3%;
+   text-align: center;
+
  }
 
- .availability-content{
-   list-style: none;
-   padding: 0px;
-    display: flex;
-    justify-content: space-between;
+ .availabilityContent {
+
+   border: 2px solid#f2d7b0;
+
+    
  }
+
+ .slots {
+   width: 100%;
+ }
+ 
+   
